@@ -23,7 +23,7 @@ const routes = [
   {
     path: '/drumbook',
     name: 'DrumBook',
-    component: () => import('../views/DrumBook.vue')
+    component: () => import('../views/DrumBook.vue') 
   }
 ]
 

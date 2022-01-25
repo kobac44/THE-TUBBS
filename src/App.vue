@@ -21,7 +21,7 @@
 }
 
 body {
-  background-color: rgb(146, 148, 148);
+  background-color: rgb(184, 187, 187);
 }
 
 #nav {

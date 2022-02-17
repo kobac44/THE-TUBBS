@@ -16,15 +16,41 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
+    path: '/teaching',
+    name: 'Teaching',
+    component: () => import('../views/Teaching.vue')
+  },
+  {
+    path: '/discography',
+    name: 'Discography',
+    component: () => import('../views/Discography.vue')
+  },
+  {
+    path: '/events',
+    name: 'Events',
+    component: () => import('../views/Events.vue')
+  },
+  {
+    path: '/gallery',
+    name: 'Gallery',
+    component: () => import('../views/Gallery.vue')
+  },
+  {
+    path: '/epk',
+    name: 'EPK',
+    component: () => import('../views/EPK.vue')
+  },
+  {
+    path: '/store',
+    name: 'Store',
+    component: () => import('../views/Store.vue') 
+  },
+  {
     path: '/contact',
     name: 'Contact',
     component: () => import('../views/Contact.vue')
   },
-  {
-    path: '/drumbook',
-    name: 'DrumBook',
-    component: () => import('../views/DrumBook.vue') 
-  }
+
 ]
 
 const router = createRouter({

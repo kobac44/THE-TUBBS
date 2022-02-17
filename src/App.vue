@@ -2,8 +2,13 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/drumbook">DRUMBOOK</router-link> |
       <router-link to="/about">About</router-link> |
+      <router-link to="/teaching">Teaching</router-link> |
+      <router-link to="/discography">Discography</router-link> |
+      <router-link to="/events">Events</router-link> |
+      <router-link to="/gallery">Gallery</router-link> |
+      <router-link to="/epk">EPK</router-link> |
+      <router-link to="/store">Store</router-link> |
       <router-link to="/contact">Contact</router-link> 
     </div>
     <router-view />
@@ -11,11 +16,12 @@
 </template>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&family=Play&display=swap');
+
 
 #app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
   text-align: center;
   color: #2c3e50;
 }

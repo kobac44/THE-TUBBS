@@ -42,6 +42,42 @@ export default {
 </script>
 
 <style scoped>
+nav {
+    padding: 12px 0;
+    transition: .5s ease all;
+    width: 90%;
+    margin: 0 auto;
+    @media (min-width: 1140px;) {
+        max-width: 1140px;
+    }
+}
+
+ul,
+.link {
+    font-weight: 500;
+    color: rgb(10, 10, 10);
+    list-style: none;
+    text-decoration: none;
+}
+
+li {
+    text-transform: uppercase;
+    padding: 16px;
+    margin-left: 16px;
+}
+
+.link {
+    font-size: 14px;
+    transition: .5 ease all;
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+}
+
+:hover {
+    color: #ff4500;
+    border-color:#ff4500;
+}
+
 
 </style>
 

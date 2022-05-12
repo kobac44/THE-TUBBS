@@ -37,12 +37,21 @@
 
 <script>
 export default {
-    
-}
+    name: "navigation",
+    data() {
+      return {
+          scrollPosition: null,
+          mobile: true,
+          mobileNav: true,
+          windowWidth: null,
+      };  
+    },
+};
 </script>
 
 <style scoped>
 nav {
+    position: relative;
     padding: 12px 0;
     transition: .5s ease all;
     width: 90%;
@@ -53,8 +62,8 @@ nav {
 }
 
 ul,
-.link {
-    font-weight: 500;
+.link{
+    font-weight: bold;
     color: rgb(10, 10, 10);
     list-style: none;
     text-decoration: none;
@@ -78,6 +87,50 @@ li {
     border-color:#ff4500;
 }
 
+.navigation {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+}
 
+.icon {
+    display: flex;
+    align-items: center;
+    position:absolute;
+    top: 0;
+    right: 24px;
+    height: 100%;
+}
+
+.icon {
+    cursor: pointer;
+    font-size: 24px;
+    transition: .8s ease all;
+}
+
+.icon-active {
+    transform: rotate(180deg);
+}
+
+.dropdown-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    background-color: darkolivegreen;
+    top: 0;
+    left: 0;
+}
+
+li {
+    margin-left: 0;
+}
+
+.link {
+    color: #000
+}
 </style>
 

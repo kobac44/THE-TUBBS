@@ -86,7 +86,8 @@ export default {
 <style scoped>
 
 nav {
-    position: relative;
+    display: flex;
+    flex-direction: row;
     padding: 12px 0;
     transition: .5s ease all;
     width: 90%;
@@ -95,6 +96,8 @@ nav {
         max-width: 1140px;
     }
 }
+
+
 
 ul,
 .link{
@@ -126,7 +129,7 @@ li {
     display: flex;
     align-items: center;
     flex: 1;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .icon {
@@ -176,7 +179,7 @@ li {
     transform: translateX(0);
 }
 
-.scrolledNav {
+.scrolled-nav {
     background-color: #000;
     box-shadow: 0 4px 6px -1  rgba(0, 0, 0 , 0.1), 0 2px 4px -1px  rgba(0, 0, 0, 0.06);
 }

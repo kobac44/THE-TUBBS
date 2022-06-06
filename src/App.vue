@@ -1,17 +1,7 @@
 <template>
   <div id="app">
+    <!-- <i class="fa-solid fa-bars"></i> -->
     <Navigation/>
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/teaching">Teaching</router-link> |
-      <router-link to="/discography">Discography</router-link> |
-      <router-link to="/events">Events</router-link> |
-      <router-link to="/gallery">Gallery</router-link> |
-      <router-link to="/epk">EPK</router-link> |
-      <router-link to="/store">Store</router-link> |
-      <router-link to="/contact">Contact</router-link> 
-    </div> -->
     <router-view />
   </div>
 </template>
@@ -20,8 +10,9 @@
 import Navigation from "./components/Navigation"
 export default {
   components:{
+    name: 'App',
     Navigation
-  }
+  },
 }
 </script>
 

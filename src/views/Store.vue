@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style>
-.name {
+/* .name {
   display:flex
 }
 
@@ -27,7 +27,7 @@ img {
 
 .name1 {
   display: flex;
-}
+} */
 
 
 </style>

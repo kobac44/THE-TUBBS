@@ -16,7 +16,7 @@
                 <li><router-link class="link" :to="{ name: 'Contact' }">Contact</router-link ></li>
             </ul>
             <div class="icon">
-                <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars" :class="{'icon-active' : mobileNav}"></i>
+                <i @click="toggleMobileNav" v-show="mobile" class="fa-solid- fa-Bars" :class="{'icon-active' : mobileNav}"></i>
             </div>
             <transition name="mobile-nav">
                 <ul v-show="mobileNav" class="dropdown-nav">
@@ -98,7 +98,6 @@ nav {
 }
 
 
-
 ul,
 .link{
     font-weight: bold;
@@ -114,7 +113,7 @@ li {
 }
 
 .link {
-    font-size: 14px;
+    font-size: 18px;
     transition: .5 ease all;
     padding-bottom: 4px;
     border-bottom: 1px solid transparent;
@@ -129,7 +128,7 @@ li {
     display: flex;
     align-items: center;
     flex: 1;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .icon {

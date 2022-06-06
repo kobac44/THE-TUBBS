@@ -16,7 +16,7 @@
                 <li><router-link class="link" :to="{ name: 'Contact' }">Contact</router-link ></li>
             </ul>
             <div class="icon">
-                <i @click="toggleMobileNav" v-show="mobile" class="fa-solid- fa-Bars" :class="{'icon-active' : mobileNav}"></i>
+                <i @click="toggleMobileNav" v-show="mobile" class="fa fa-bars" :class="{'icon-active' : mobileNav}"></i>
             </div>
             <transition name="mobile-nav">
                 <ul v-show="mobileNav" class="dropdown-nav">
@@ -42,7 +42,7 @@ export default {
     data() {
       return {
           scrolledNav: null,
-          mobile: null,
+          mobile: false,
           mobileNav: null,
           windowWidth: null,
       };  
@@ -84,8 +84,15 @@ export default {
 </script>
 
 <style scoped>
+header {
+    z-index: 99;
+    width: 100%;
+    position: fixed;
+    transition: .5s ease all;
+}
 
 nav {
+    position: relative;
     display: flex;
     flex-direction: row;
     padding: 12px 0;
@@ -113,7 +120,7 @@ li {
 }
 
 .link {
-    font-size: 18px;
+    font-size: 14px;
     transition: .5 ease all;
     padding-bottom: 4px;
     border-bottom: 1px solid transparent;
@@ -140,12 +147,15 @@ li {
     height: 100%;
 }
 
-.icon 
-.icon-active{
+i {
     cursor: pointer;
     font-size: 28px;
     transition: .8s ease all;
-    transform: rotate(180deg);
+}
+
+.icon-active {
+    transform: rotate(180);
+
 }
 
 .dropdown-nav {

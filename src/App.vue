@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <!-- <i class="fa-solid fa-bars"></i> -->
     <Navigation/>
     <router-view />
   </div>
 </template>
 
 <script>
-import Navigation from "./components/Navigation"
+import Navigation from "./components/Navigation";
 export default {
   components:{
     name: 'App',
-    Navigation
+    Navigation,
+    
   },
 }
 </script>

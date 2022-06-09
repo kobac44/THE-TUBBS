@@ -6,7 +6,7 @@
             </div>
             <ul v-show="!mobile" class="navigation">
                 <li><router-link class="link" :to="{ name: 'Home' }">Home</router-link ></li>
-                <li><router-link class="link" :to="{ name: 'About' }">About</router-link ></li>
+                <li><button class="dropdownmenu" :to="{ name: 'About' }">About</button ></li>
                 <li><router-link class="link" :to="{ name: 'Teaching' }">Teaching</router-link ></li>
                 <li><router-link class="link" :to="{ name: 'Discography' }">Discography</router-link ></li>
                 <li><router-link class="link" :to="{ name: 'Events' }">Events</router-link ></li>
@@ -21,7 +21,7 @@
             <transition name="mobile-nav">
                 <ul v-show="mobileNav" class="dropdown-nav">
                     <li><router-link class="link" :to="{ name: 'Home' }">Home</router-link ></li>
-                    <li><router-link class="link" :to="{ name: 'About' }">About</router-link ></li>
+                    <li><button class="dropdownmenu" :to="{ name: 'About' }">About</button ></li>
                     <li><router-link class="link" :to="{ name: 'Teaching' }">Teaching</router-link ></li>
                     <li><router-link class="link" :to="{ name: 'Discography' }">Discography</router-link ></li>
                     <li><router-link class="link" :to="{ name: 'Events' }">Events</router-link ></li>
@@ -36,17 +36,22 @@
 </template>
 
 <script>
+import DropdownMenuVue from './DropdownMenu.vue';
 
 export default {
     name: "navigation",
+    components: {
+        DropdownMenuVue,
+    },
     data() {
-      return {
+        return {
           scrolledNav: null,
           mobile: false,
           mobileNav: null,
           windowWidth: null,
       };  
     },
+    
     created() {
        window.addEventListener("resize", this.checkScreen);
        this.checkScreen();
@@ -55,6 +60,7 @@ export default {
         window.addEventListener('scroll', this.updateScroll);
 
     },
+    
     methods: {
         toggleMobileNav() {
             this.mobileNav = !this.mobileNav;
@@ -102,6 +108,15 @@ nav {
     @media (min-width: 1140px;) {
         max-width: 1140px;
     }
+}
+
+button {
+   background-color: transparent;
+   background-repeat: no-repeat;
+   border: none;
+   font-family: inherit;
+   font-size: 16px;
+   font-weight: bold;
 }
 
 

@@ -6,7 +6,7 @@
             </div>
             <ul v-show="!mobile" class="navigation">
                 <li><router-link class="link" :to="{ name: 'Home' }">Home</router-link ></li>
-                <li><button class="dropdownmenu" :to="{ name: 'About' }">About</button ></li>
+                <DropdownMenu title="About" :items="about" />
                 <li><router-link class="link" :to="{ name: 'Teaching' }">Teaching</router-link ></li>
                 <li><router-link class="link" :to="{ name: 'Discography' }">Discography</router-link ></li>
                 <li><router-link class="link" :to="{ name: 'Events' }">Events</router-link ></li>
@@ -21,7 +21,7 @@
             <transition name="mobile-nav">
                 <ul v-show="mobileNav" class="dropdown-nav">
                     <li><router-link class="link" :to="{ name: 'Home' }">Home</router-link ></li>
-                    <li><button class="dropdownmenu" :to="{ name: 'About' }">About</button ></li>
+                    <dropdownMenu title="About" :item="about" />
                     <li><router-link class="link" :to="{ name: 'Teaching' }">Teaching</router-link ></li>
                     <li><router-link class="link" :to="{ name: 'Discography' }">Discography</router-link ></li>
                     <li><router-link class="link" :to="{ name: 'Events' }">Events</router-link ></li>

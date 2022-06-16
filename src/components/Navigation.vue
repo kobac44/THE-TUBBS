@@ -21,7 +21,7 @@
             <transition name="mobile-nav">
                 <ul v-show="mobileNav" class="dropdown-nav">
                     <li><router-link class="link" :to="{ name: 'Home' }">Home</router-link ></li>
-                    <dropdownMenu title="About" :item="about" />
+                    <DropdownMenu title="About" :items="about" />
                     <li><router-link class="link" :to="{ name: 'Teaching' }">Teaching</router-link ></li>
                     <li><router-link class="link" :to="{ name: 'Discography' }">Discography</router-link ></li>
                     <li><router-link class="link" :to="{ name: 'Events' }">Events</router-link ></li>
@@ -36,12 +36,12 @@
 </template>
 
 <script>
-import DropdownMenuVue from './DropdownMenu.vue';
+import DropdownMenu from './DropdownMenu.vue';
 
 export default {
     name: "navigation",
     components: {
-        DropdownMenuVue,
+        DropdownMenu,
     },
     data() {
         return {

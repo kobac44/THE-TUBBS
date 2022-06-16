@@ -7,12 +7,12 @@
 
 <script>
 import Navigation from "./components/Navigation";
-import DropdownMenuVue from "./components/DropdownMenu.vue";
+import DropdownMenu from "./components/DropdownMenu.vue";
 export default {
   components:{
     name: 'App',
     Navigation,
-    DropdownMenuVue,
+    DropdownMenu,
     
   },
 }

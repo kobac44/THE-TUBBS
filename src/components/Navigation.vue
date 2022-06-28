@@ -86,6 +86,24 @@ export default {
             return;
         },
     },
+    data () {
+        return {
+            about: [
+                {
+                    title: 'Bio',
+                    link: '#'
+                },
+                {
+                    title: 'Ensembles',
+                    link: '#'
+                },
+                {
+                    title: 'Equipment',
+                    link: '#'
+                },
+            ]
+        }
+    },
 };
 </script>
 

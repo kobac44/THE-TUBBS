@@ -17,5 +17,8 @@ export default {
 </script>
 
 <style scope>
-
+nav .menu-item svg {
+    width: 10px;
+    margin-left: 30px;
+}
 </style>

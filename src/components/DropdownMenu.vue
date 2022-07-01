@@ -36,7 +36,7 @@ nav .menu-item svg {
 
 nav .menu-item .sub-menu {
     position: absolute;
-    top: calc(100% + 18px);
+    /* top: calc(100% + 18px); */
     transform: translate(-50);
     width: max-content;
     border-radius: 0px 0px 16px 16px;

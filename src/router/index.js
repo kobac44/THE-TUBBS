@@ -1,62 +1,37 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import { createWebHistory, createRouter } from "vue-router";
+import Home from "@/components/Home.vue";
+import About from "@/components/About.vue";
+import Teaching from "@/components/Teaching.vue";
+import Contact from "@/components/Contact.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // },
-  {
-    path: '/teaching',
-    name: 'Teaching',
-    component: () => import('../views/Teaching.vue')
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/discography',
-    name: 'Discography',
-    component: () => import('../views/Discography.vue')
+    path: "/about",
+    name: "About",
+    component: About,
   },
   {
-    path: '/events',
-    name: 'Events',
-    component: () => import('../views/Events.vue')
+    path: "/teaching",
+    name: "Teaching",
+    component: Teaching,
   },
   {
-    path: '/gallery',
-    name: 'Gallery',
-    component: () => import('../views/Gallery.vue')
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
   },
-  {
-    path: '/epk',
-    name: 'EPK',
-    component: () => import('../views/EPK.vue')
-  },
-  {
-    path: '/store',
-    name: 'Store',
-    component: () => import('../views/Store.vue') 
-  },
-  {
-    path: '/contact',
-    name: 'Contact',
-    component: () => import('../views/Contact.vue')
-  },
-
 ]
 
+
+
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  history: createWebHistory(),
+  routes,
+});
 
 export default router;
-

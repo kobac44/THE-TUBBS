@@ -1,47 +1,36 @@
 <template>
     <header :class="{ 'scrolled-nav': scrolledNav }">
-        <nav>
+        <nav id="vue">
             <div class="branding">
                 <img scr="" alt="">
             </div>
-            <ul v-show="!mobile" class="navigation">
-                <li><router-link class="link" :to="{ name: 'Home' }">Home</router-link ></li>
-                <DropdownMenu title="About" :items="about" />
-                <li><router-link class="link" :to="{ name: 'Teaching' }">Teaching</router-link ></li>
-                <li><router-link class="link" :to="{ name: 'Discography' }">Discography</router-link ></li>
-                <li><router-link class="link" :to="{ name: 'Events' }">Events</router-link ></li>
-                <li><router-link class="link" :to="{ name: 'Gallery' }">Gallery</router-link ></li>
-                <li><router-link class="link" :to="{ name: 'EPK' }">EPK</router-link ></li>
-                <li><router-link class="link" :to="{ name: 'Store' }">Store</router-link ></li>
-                <li><router-link class="link" :to="{ name: 'Contact' }">Contact</router-link ></li>
-            </ul>
+            <div v-show="!mobile" class="navbar1">
+                <router-link to="/">Home</router-link>
+                <router-link to="About">About</router-link>
+                <router-link to="Teaching">Teaching</router-link>
+                <router-link to="Contact">Contact</router-link>
+            </div>
             <div class="icon">
                 <i @click="toggleMobileNav" v-show="mobile" class="fa fa-bars" :class="{'icon-active' : mobileNav}"></i>
             </div>
             <transition name="mobile-nav">
-                <ul v-show="mobileNav" class="dropdown-nav">
-                    <li><router-link class="link" :to="{ name: 'Home' }">Home</router-link ></li>
-                    <DropdownMenu title="About" :items="about" />
-                    <li><router-link class="link" :to="{ name: 'Teaching' }">Teaching</router-link ></li>
-                    <li><router-link class="link" :to="{ name: 'Discography' }">Discography</router-link ></li>
-                    <li><router-link class="link" :to="{ name: 'Events' }">Events</router-link ></li>
-                    <li><router-link class="link" :to="{ name: 'Gallery' }">Gallery</router-link ></li>
-                    <li><router-link class="link" :to="{ name: 'EPK' }">EPK</router-link ></li>
-                    <li><router-link class="link" :to="{ name: 'Store' }">Store</router-link ></li>
-                    <li><router-link class="link" :to="{ name: 'Contact' }">Contact</router-link ></li>
-                </ul>
+                <div v-show="mobileNav" class="dropdown-nav">
+                    <router-link to="/">Home</router-link>
+                    <router-link to="About">About</router-link >
+                    <router-link to="Teaching">Teaching</router-link>
+                    <router-link to="Contact">Contact</router-link>
+                </div>
             </transition>
         </nav>
     </header>
 </template>
 
 <script>
-import DropdownMenu from './DropdownMenu.vue';
 
 export default {
-    name: "navigation",
+    name: "navbar1",
     components: {
-        DropdownMenu,
+        
     },
     data() {
         return {
@@ -86,24 +75,6 @@ export default {
             return;
         },
     },
-    data () {
-        return {
-            about: [
-                {
-                    title: 'Bio',
-                    link: '#'
-                },
-                {
-                    title: 'Ensembles',
-                    link: '#'
-                },
-                {
-                    title: 'Equipment',
-                    link: '#'
-                },
-            ]
-        }
-    },
 };
 </script>
 
@@ -115,7 +86,7 @@ header {
     transition: .5s ease all;
 }
 
-nav {
+.navbar1 {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -137,16 +108,14 @@ button {
    font-weight: bold;
 }
 
-
-ul,
-.link{
+.navbar1 {
     font-weight: bold;
     color: rgb(10, 10, 10);
     list-style: none;
     text-decoration: none;
 }
 
-li {
+.navbar1 {
     text-transform: uppercase;
     padding: 16px;
     margin-left: 16px;
@@ -164,7 +133,7 @@ li {
     border-color:#ff4500;
 }
 
-.navigation {
+.navbar1 {
     display: flex;
     align-items: center;
     flex: 1;
@@ -191,7 +160,7 @@ i {
 
 }
 
-.dropdown-nav {
+.navbar1 {
     display: flex;
     flex-direction: column;
     position: fixed;

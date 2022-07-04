@@ -15,7 +15,7 @@
     "core-js": "^3.22.8",
     "get-google-fonts": "^1.2.2",
     "vue": "^3.2.36",
-    "vue-router": "^4.0.15"
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",

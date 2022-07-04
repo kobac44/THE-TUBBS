@@ -1,21 +1,19 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import '@fortawesome/fontawesome-free/css/all.css'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+// import '@fortawesome/fontawesome-free/css/all.css'
+// import { library } from '@fortawesome/fontawesome-svg-core'
+// import { fas } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // library.add(fas)
 
 // Vue.component('font-awesome-icon', FontAwesomeIcon);
 
-// Vue.config.productionTip = false,
+// Vue.config.productionTip = false
 
 // new Vue({
-//     el: '#app',
-//     components: { App },
-//     template: '<App/>'
-//   });
+//   render: h => h(App) 
+// }).$mount('#app');
 
-createApp(App).use(router).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+createApp(App).use(router).mount('#app');

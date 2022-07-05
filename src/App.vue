@@ -1,20 +1,18 @@
 <template>
   <div id="app">
-    <Navigation/>
+    <Navbar1 />
     <router-view />
   </div>
 </template>
 
 <script>
-import Navigation from "./components/Navigation";
-import DropdownMenu from "./components/DropdownMenu.vue";
+import Navbar1 from "@/components/Navbar1"
 export default {
   components:{
     name: 'App',
-    Navigation,
-    DropdownMenu,
+    Navbar1    
     
-  },
+  }
 }
 </script>
 

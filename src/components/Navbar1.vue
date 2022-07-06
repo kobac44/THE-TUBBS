@@ -1,25 +1,25 @@
 <template>
     <header :class="{ 'scrolled-nav': scrolledNav }">
-        <nav id="vue">
+        <nav>
             <div class="branding">
-                <img scr="" alt="">
+                <img scr="@/images/kwglogo.png" alt="" />
             </div>
-            <div v-show="!mobile" class="navbar1">
-                <router-link to="/">Home</router-link>
-                <router-link to="About">About</router-link>
-                <router-link to="Teaching">Teaching</router-link>
-                <router-link to="Contact">Contact</router-link>
-            </div>
+            <ul v-show="!mobile" class="navbar1">
+                <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
+                <li><router-link :to="{ name: 'About' }">About</router-link></li>
+                <li><router-link :to="{ name: 'Teaching' }">Teaching</router-link></li>
+                <li><router-link :to="{ name: 'Contact' }">Contact</router-link></li>
+            </ul>
             <div class="icon">
                 <i @click="toggleMobileNav" v-show="mobile" class="fa fa-bars" :class="{'icon-active' : mobileNav}"></i>
             </div>
             <transition name="mobile-nav">
-                <div v-show="mobileNav" class="dropdown-nav">
-                    <router-link to="/">Home</router-link>
-                    <router-link to="About">About</router-link >
-                    <router-link to="Teaching">Teaching</router-link>
-                    <router-link to="Contact">Contact</router-link>
-                </div>
+              <ul v-show="mobileNav" class="dropdown-nav">
+                <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
+                <li><router-link :to="{ name: 'About' }">About</router-link></li>
+                <li><router-link :to="{ name: 'Teaching' }">Teaching</router-link></li>
+                <li><router-link :to="{ name: 'Contact' }">Contact</router-link></li>
+              </ul>
             </transition>
         </nav>
     </header>

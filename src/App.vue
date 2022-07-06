@@ -8,11 +8,11 @@
 <script>
 import Navbar1 from "@/components/Navbar1"
 export default {
-  components:{
-    name: 'App',
-    Navbar1    
-    
+  name: "App",
+  components: {
+    Navbar1,
   }
+    
 }
 </script>
 
